@@ -1,15 +1,13 @@
-import './App.css'
+
+import './App.css';
+import Home from './components/Home';  // Importa o componente Home
 
 function App() {
-
   return (
-    
-      <div>
-        <h1>Tempo de Ouro</h1>
-      </div>
-       
-    
-  )
+    <div>
+      <Home />  {/* Renderiza o componente Home */}
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,239 @@
+.banner-image {
+  width: 100%; /* Faz a imagem ocupar toda a largura */
+  height: 100%; /* Faz a imagem ocupar toda a altura */
+  object-fit: cover; /* Mantém a proporção da imagem sem distorção */
+}
+
+
+
+/* Depoimento.css */
+
+.Depoimento {
+  width: 100%; /* Largura total da página */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 70px 0; /* Espaçamento vertical */
+}
+
+.Group2 {
+  width: 680px; /* Largura do retângulo */
+  background: white;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column; /* Alinha itens verticalmente */
+  align-items: center; /* Centraliza itens horizontalmente */
+  padding: 20px; /* Espaçamento interno */
+}
+
+.Rectangle1 {
+  width: 100%; /* Largura total do retângulo */
+  height: 50px; /* Altura do retângulo */
+}
+
+.depoimento-text {
+  text-align: center;
+  color: #A66C00;
+  font-size: 16px;
+  font-family: 'Cinzel', sans-serif;
+  font-weight: 400;
+  /* Espaçamento entre o texto e os outros itens */
+}
+
+.Fulano {
+  margin-top: 20px;
+  text-align: center;
+  color: #693A00;
+  font-size: 24px;
+  font-family: 'Carattere', serif;
+  font-weight: 400;
+}
+
+.ParticipanteDaTempoDeOuro {
+  margin-top: 10px;
+  text-align: center;
+  color: #693A00;
+  font-size: 14px;
+  font-family: 'Cormorant Upright', serif;
+  font-weight: 400;
+}
+
+
+
+
+
+
+/*PASSOS*/
+.Passos {
+  padding: 20px;
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.titulo {
+  font-size: 40px; /* Ajuste o tamanho da fonte conforme necessário */
+  margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.subtitulo {
+  font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+  margin-bottom: 80px; /* Espaçamento abaixo do subtítulo */
+}
+
+.titulo-rect {
+  font-size: 25px; /* Ajuste o tamanho da fonte conforme necessário */
+  margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.retangulos {
+  display: flex;
+  justify-content: space-around; /* Espaçamento igual entre os retângulos */
+  flex-wrap: wrap; /* Permite que os retângulos se movam para a próxima linha em telas menores */
+  margin: 0 10px; /* Adiciona uma margem lateral */
+}
+
+.retangulo {
+  padding: 20px; /* Espaçamento interno */
+  margin: 10px; /* Margem entre os retângulos */
+  width: calc(40% - 20px); /* Ajuste a largura, considerando margens */
+}
+
+.icone {
+  margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+}
+
+.icon-image {
+  width: 15%; /* Ajuste a largura da imagem do ícone de coração */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.descricao {
+  font-size: 16px; /* Ajuste o tamanho da fonte da descrição */
+  color: #666; /* Cor da fonte da descrição */
+}
+
+
+
+.container-botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  margin: 0;
+}
+
+.botao {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #8B4513;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px; /* Bordas arredondadas */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.botao:hover {
+  background-color: #A0522D; /* Cor ao passar o mouse */
+  transform: translateY(-3px); /* Eleva o botão ao passar o mouse */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+}
+
+
+
+
+/*SOBRE NOS*/
+.sobre-nos {
+  text-align: center;
+  padding: 50px 20px; /* Adicione padding para espaço ao redor */
+  background-color: #f9f9f9; /* Cor de fundo clara */
+  margin: 20px 0; /* Margem acima e abaixo da seção */
+}
+
+.sobre-nos .titulo {
+  font-size: 24px; /* Tamanho da fonte do título */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 15px; /* Espaço abaixo do título */
+  color: #8B4513; /* Cor do título */
+}
+
+.sobre-nos .descricao {
+  font-size: 16px; /* Tamanho da fonte da descrição */
+  color: #333; /* Cor da descrição */
+  max-width: 800px; /* Largura máxima da descrição */
+  margin: 0 auto; /* Centraliza a descrição */
+}
+
+
+
+
+
+/*CONTATO*/
+.contato {
+  width: 100%;
+  height: 245px;
+  background: #693A00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ic-baseline-phone {
+  width: 81px;
+  height: 81px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.vector img {
+  width: 80px;
+  height: 80px;
+}
+
+.contato-textos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  text-align: center; /* Centraliza o texto dentro dos elementos */
+}
+
+.alguma-duvida {
+  font-size: 48px;
+  color: white;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.entre-em-contato {
+  font-size: 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.numero-telefone {
+  font-size: 24px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+
+
+
