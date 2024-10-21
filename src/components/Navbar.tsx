@@ -1,7 +1,5 @@
 // src/components/Navbar.tsx
 import './Navbar.css'; // Crie este arquivo CSS para estilizar a Navbar
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
@@ -19,9 +17,7 @@ const Navbar = () => {
       </div>
       <div className="header">
         <div className="mdi-user">
-          <FontAwesomeIcon icon={faUser} style={{ color: '#693A00', fontSize: '16px' }} />
         </div>
-        <div className="entrar">Entrar</div>
       </div>
     </div>
   );
