@@ -1,0 +1,19 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 35px; /* Espaço abaixo do título */
+    color: #8B4513; /* Cor do título */
+}
