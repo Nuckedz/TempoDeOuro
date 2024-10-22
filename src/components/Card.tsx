@@ -4,7 +4,7 @@ const Card = () => {
   return (
     <div className="card">
         <div>
-        <img src="../TempoDeOuro-main/images/Idoso 1.png" alt="Foto do Idoso"/>
+        <img src="../TempoDeOuro/images/Idoso 1.png" alt="Foto do Idoso"/>
         </div>
         <div className="info">
             <h2>Nome Sobrenome</h2>

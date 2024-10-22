@@ -1,8 +1,58 @@
 import './Form1.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { useState } from 'react';
+import { collection, addDoc } from 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
+import { firebaseApp } from './Firebase'; 
 
 const Form1 = () => {
+  const [formData, setFormData] = useState({
+    nome: '',
+    idade: '',
+    email: '',
+    celular: '',
+    data: '',
+    horario: '',
+  });
+
+  const db = getFirestore(firebaseApp); 
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      await addDoc(collection(db, "colaboradores"), {
+        nome: formData.nome,
+        idade: formData.idade,
+        email: formData.email,
+        celular: formData.celular,
+        dataNascimento: formData.data,
+        horario: formData.horario,
+      });
+      console.log("Documento salvo com sucesso!");
+    } catch (error) {
+      console.error("Erro ao salvar documento: ", error);
+    }
+
+    
+    setFormData({
+      nome: '',
+      idade: '',
+      email: '',
+      celular: '',
+      data: '',
+      horario: '',
+    });
+  };
+
   return (
     <div>
       <Navbar />
@@ -22,24 +72,69 @@ const Form1 = () => {
           <div className="col-md-8 text-center">
             <h1>Seja um voluntário</h1> <br />
             <div className="form-container mx-auto">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <label htmlFor="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Digite seu nome"
+                  required
+                  value={formData.nome}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="idade">Idade</label>
-                <input type="number" id="idade" name="idade" placeholder="Digite sua idade" required />
+                <input
+                  type="number"
+                  id="idade"
+                  name="idade"
+                  placeholder="Digite sua idade"
+                  required
+                  value={formData.idade}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Digite seu e-mail"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="celular">Celular</label>
-                <input type="tel" id="celular" name="celular" placeholder="Digite seu celular" required />
+                <input
+                  type="tel"
+                  id="celular"
+                  name="celular"
+                  placeholder="Digite seu celular"
+                  required
+                  value={formData.celular}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="data">Data</label>
-                <input type="date" id="data" name="data" required />
+                <input
+                  type="date"
+                  id="data"
+                  name="data"
+                  required
+                  value={formData.data}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="horario">Escolha um horário</label>
-                <select id="time" name="horario" defaultValue="" required>
+                <select
+                  id="horario"
+                  name="horario"
+                  value={formData.horario}
+                  onChange={handleChange}
+                  required
+                >
                   <option value="" disabled>Selecione</option>
                   <option value="14:00">14:00</option>
                   <option value="15:00">15:00</option>
