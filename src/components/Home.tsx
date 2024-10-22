@@ -1,120 +1,122 @@
 // src/components/Home.tsx
 import './Home.css';
-import Navbar from './Navbar'; // Importa o componente Navbar
-import Footer from './Footer'; // Corrigido: use / ao invés de \
+import Navbar from './Navbar';
+import Footer from './Footer'; 
 
 const Home = () => {
   return (
     <div>
-      <Navbar /> {/* Adiciona a Navbar aqui */}
+      <Navbar />
 
       {/* HERO */}
       <div className="banner">
-        <div className="banner-content">
-          <img src="src/assets/images/oldpeople.jpg" alt="Banner" className="banner-image" />
-        </div>
+        <img src="src/assets/images/banner.png" alt="Banner" className="banner-image" />
       </div>
 
       {/* DEPOIMENTO */}
-      <div className="Depoimento">
-        <div className="Group2">
-          <div className="Rectangle1" />
-          <div className="depoimento-text">
+      <div className="depoimento">
+        <div className="group">
+          <div className="rectangle" />
+          <div className="text">
             “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
           </div>
-          <div className="Fulano">Fulano</div>
-          <div className="ParticipanteDaTempoDeOuro">Participante da Tempo de Ouro</div>
+          <div className="name">Fulano</div>
+          <div className="role">Participante da Tempo de Ouro</div>
         </div>
       </div>
 
       {/* PASSOS */}
-      <div className="Passos">
-        <div className="ConecteGeracoes">
-          <div className="titulo">Conecte gerações. Enriqueca histórias.</div>
-          <div className="subtitulo">
-            Visitas que transformam vidas e criam laços duradouros.
-          </div>
+      <div className="passos">
+        <div className="titulo">Conecte gerações. Enriqueca histórias.</div>
+        <div className="subtitulo">Visitas que transformam vidas e criam laços duradouros.</div>
+
+        <div className="passos-grid">
+          {['Escolha Seu Amigo', 'Agende Sua Visita', 'Prepare Um Presente ou Atividade', 'Acompanhe e Construa Laços'].map((title, index) => (
+            <div className="passo" key={index}>
+              <div className="icon">
+                <img src={`src/assets/images/${index + 1}.png`} alt="Ícone" className="icon-image" />
+              </div>
+              <div className="passo-titulo">{title}</div>
+              <div className="passo-descricao">
+                {title === 'Escolha Seu Amigo' ? 'Explore os perfis dos idosos disponíveis e escolha aquele com quem você mais se identifica. Cada perfil contém uma breve descrição sobre seus hobbies, histórias de vida e preferências, ajudando você a encontrar a melhor conexão.' : 
+                title === 'Agende Sua Visita' ? 'Reserve um tempo para uma visita especial, onde você poderá conhecer mais sobre a história e a sabedoria do seu amigo, fortalecendo laços que podem durar para sempre.' :
+                title === 'Prepare Um Presente ou Atividade' ? 'Oferecemos sugestões de presentes simples ou atividades, como leitura, jogos ou até mesmo uma conversa. Pequenos gestos fazem uma grande diferença no dia a dia do idoso.' :
+                'Após sua primeira visita, você pode continuar acompanhando o idoso, criando uma amizade duradoura. Nosso sistema permite que você envie mensagens, agende novas visitas e acompanhe o bem-estar dele.'}
+              </div>
+            </div>
+          ))}
         </div>
-
-        <div className="retangulos">
-          <div className="retangulo">
-            <div className="icone">
-              <img src="src/assets/images/1.png" alt="Coração" className="icon-image" />
-            </div>
-            <div className="titulo-rect">Escolha Seu Amigo</div>
-            <div className="descricao">
-              Explore os perfis dos idosos disponíveis e escolha aquele com quem você mais se identifica. Cada perfil contém uma breve descrição sobre seus hobbies, histórias de vida e preferências, ajudando você a encontrar a melhor conexão.
-            </div>
-          </div>
-
-          <div className="retangulo">
-            <div className="icone">
-              <img src="src/assets/images/2.png" alt="Coração" className="icon-image" />
-            </div>
-            <div className="titulo-rect">Agende Sua Visita</div>
-            <div className="descricao">
-              Explore os perfis dos idosos disponíveis e escolha aquele com quem você mais se identifica. Cada perfil contém uma breve descrição sobre seus hobbies, histórias de vida e preferências, ajudando você a encontrar a melhor conexão.
-            </div>
-          </div>
-        </div>
-
-        <div className="retangulos">
-          <div className="retangulo">
-            <div className="icone">
-              <img src="src/assets/images/3.png" alt="Coração" className="icon-image" />
-            </div>
-            <div className="titulo-rect">Prepare Um Presente ou Atividade</div>
-            <div className="descricao">
-              Oferecemos sugestões de presentes simples ou atividades, como leitura, jogos ou até mesmo uma conversa. Pequenos gestos fazem uma grande diferença no dia a dia do idoso.
-            </div>
-          </div>
-
-          <div className="retangulo">
-            <div className="icone">
-              <img src="src/assets/images/4.png" alt="Coração" className="icon-image" />
-            </div>
-            <div className="titulo-rect">Acompanhe e Construa Laços</div>
-            <div className="descricao">
-              Após sua primeira visita, você pode continuar acompanhando o idoso, criando uma amizade duradoura. Nosso sistema permite que você envie mensagens, agende novas visitas e acompanhe o bem-estar dele.
-            </div>
-          </div>
+        <div className="container-botao">
+          <a href="caminho/da/sua/pagina.html" className="botao">Confira Nossos Amigos Aqui</a>
         </div>
       </div>
 
-      <div className="container-botao">
-        <a href="caminho/da/sua/pagina.html" className="botao">Confira Nossos Amigos Aqui</a>
-      </div>
+        
+  
 
       {/* SEÇÃO SOBRE NÓS */}
-      <div className="sobre-nos">
+      <div id="sobrenos" className="sobre">
         <div className="titulo">Sobre Nós</div>
         <div className="descricao">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          <br />
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </div>
       </div>
+
+
+      {/* SEÇÃO LARES */}
+      <div className="lares" id='nossoslares'>
+        <div className="lar">
+          <h2 className="titulo">Lar Doce Aconchego</h2>
+          <div className="imagens">
+            <img src="src/assets/images/lar1-1.png" alt="Imagem do Lar Doce Aconchego 1" className="imagem" />
+            <img src="src/assets/images/lar1-2.png" alt="Imagem do Lar Doce Aconchego 2" className="imagem" />
+          </div>
+          <div className="descricao">
+            <p>
+              O Lar Doce Aconchego Curitiba é uma instituição que se destaca por seu compromisso com a qualidade de vida dos idosos. Localizado em um ambiente tranquilo, o lar oferece um espaço acolhedor, ideal para aqueles que buscam um lugar seguro e cheio de carinho.
+            </p>
+            <p>
+              A equipe de profissionais é composta por enfermeiros, cuidadores e terapeutas que trabalham em conjunto para atender às necessidades de cada residente, sempre priorizando a individualidade e o respeito. Com um foco na promoção da saúde física e mental, o lar oferece atividades recreativas, sociais e terapias, contribuindo para o bem-estar e a socialização dos idosos.
+            </p>
+            <p>
+              A alimentação é outro ponto forte do Lar Doce Aconchego, que conta com um cardápio balanceado e adaptado às necessidades nutricionais de cada morador, garantindo refeições saborosas e saudáveis.
+            </p>
+            <p>
+              Além disso, o lar valoriza a interação familiar e a criação de laços afetivos, promovendo visitas regulares e eventos que incentivam a participação dos familiares nas atividades. Com um ambiente familiar e acolhedor, o Lar Doce Aconchego Curitiba é mais do que um asilo; é um verdadeiro lar onde os idosos podem desfrutar de segurança, respeito e amor na terceira idade.
+            </p>
+          </div>
+
+        </div>
+
+        <div className="lar">
+          <h2 className="titulo">LAR 2</h2>
+          <div className="imagens">
+            <img src="src/assets/images/lar1-1.png" alt="Imagem LAR 2" className="imagem" />
+            <img src="src/assets/images/lar1-2.png" alt="Imagem LAR 2" className="imagem" />
+          </div>
+          <div className="descricao">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id distinctio nesciunt atque quis adipisci. Eos non, perferendis odit commodi quam ipsum reiciendis! Saepe, tempora aspernatur delectus iste tenetur eum perspiciatis.
+          </div>
+        </div>
+      </div>
+
+
 
       {/* CONTATO */}
       <div className="contato">
         <div className="contato-conteudo">
-          {/* Coluna para o ícone */}
-          <div className="ic-baseline-phone">
-            <div className="vector">
-              <img src="src/assets/images/phone.png" alt="Ícone de Telefone" />
-            </div>
+          <div className="ic-phone">
+            <img src="src/assets/images/phone.png" alt="Ícone de Telefone" />
           </div>
-
-          {/* Coluna para os textos */}
           <div className="contato-textos">
-            <div className="alguma-duvida">Alguma dúvida?</div>
+            <div className="alguma-duvida" id='contato'>Alguma dúvida?</div>
             <div className="entre-em-contato">Entre em Contato</div>
             <div className="numero-telefone">41 99999-9999</div>
           </div>
         </div>
       </div>
 
-      <Footer /> {/* Adiciona o Footer aqui */}
+      <Footer />
     </div>
   );
 };

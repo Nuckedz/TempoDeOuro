@@ -1,38 +1,37 @@
 /* src/components/Navbar.css */
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white; /* cor de fundo */
-    height: 80px; /* altura da navbar */
-    padding: 0 20px; /* espaçamento lateral */
-  }
-  
-  .logo {
-    width: 71px; /* ajuste conforme necessário */
-    height: 58px; /* ajuste conforme necessário */
-  }
-  
-  .nav-items {
-    display: flex;
-    gap: 20px; /* espaçamento entre os itens */
-  }
-  
-  .nav-item {
-    color: #A66C00;
-    font-size: 16px; /* aumente o tamanho da fonte conforme necessário */
-    cursor: pointer; /* adiciona um cursor de ponteiro ao passar o mouse */
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .mdi-user {
-    margin-right: 10px; /* espaçamento entre ícone e texto */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 80px;
+  padding: 0 20px;
+}
 
+.logo {
+  width: 71px;
+  height: 58px;
+}
 
+.nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  color: #A66C00;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Merriweather', serif;
+  font-weight: 550;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.mdi-user {
+  margin-right: 10px;
+}

@@ -1,7 +1,5 @@
 // src/components/Navbar.tsx
 import './Navbar.css'; // Crie este arquivo CSS para estilizar a Navbar
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
@@ -12,16 +10,12 @@ const Navbar = () => {
         alt="Logo Tempo de Ouro" 
       />
       <div className="nav-items">
-        <div className="nav-item">SOBRE NÓS</div>
-        <div className="nav-item">NOSSOS LARES</div>
-        <div className="nav-item">PARTICIPE</div>
-        <div className="nav-item">CONTATO</div>
+        <a href="#sobrenos"><div className="nav-item">SOBRE NÓS</div></a>
+        <a href="#nossoslares"><div className="nav-item">NOSSOS LARES</div></a>
+        <a href="#"><div className="nav-item">PARTICIPE</div></a>
+        <a href="#contato"><div className="nav-item">CONTATO</div></a>
       </div>
       <div className="header">
-        <div className="mdi-user">
-          <FontAwesomeIcon icon={faUser} style={{ color: '#693A00', fontSize: '16px' }} />
-        </div>
-        <div className="entrar">Entrar</div>
       </div>
     </div>
   );
