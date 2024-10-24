@@ -1,7 +1,7 @@
 // src/components/Home.tsx
 import './Home.css';
-import Navbar from './Navbar'; // Importa o componente Navbar
-import Footer from './Footer'; // Corrigido: use / ao invés de \
+import Navbar from './layout/Navbar'; // Importa o componente Navbar
+import Footer from './layout/Footer'; // Corrigido: use / ao invés de \
 
 const Home = () => {
   return (
@@ -82,7 +82,7 @@ const Home = () => {
       </div>
 
       <div className="container-botao">
-        <a href="caminho/da/sua/pagina.html" className="botao">Confira Nossos Amigos Aqui</a>
+        <a href="/Lista" className="botao">Confira Nossos Amigos Aqui</a>
       </div>
 
       {/* SEÇÃO SOBRE NÓS */}

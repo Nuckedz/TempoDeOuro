@@ -1,12 +1,12 @@
-import './Form1.css';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import './Participe.css';
+import Navbar from './layout/Navbar';
+import Footer from './layout/Footer';
+import Card from './layout/Card';
 import { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
-import { getFirestore } from 'firebase/firestore';
-import { firebaseApp } from './Firebase'; 
+import { db } from './Firebase/FirebaseConn'; 
 
-const Form1 = () => {
+const Participe = () => {
   const [formData, setFormData] = useState({
     nome: '',
     idade: '',
@@ -16,16 +16,14 @@ const Form1 = () => {
     horario: '',
   });
 
-  const db = getFirestore(firebaseApp); 
-
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     
     try {
@@ -55,23 +53,19 @@ const Form1 = () => {
 
   return (
     <div>
-      <Navbar />
-      <div className="container d-flex align-items-center justify-content-center vh-100">
+
+      <Navbar/>
+
+      <div className="container-fluid d-flex align-items-center justify-content-center vh-100">
+
         <div className="row align-items-center">
-          <div className="col-md-4 text-center">
-            <img src="img/img1.png" alt="Foto do usuário" className="rounded img-fluid perfil-img" />
-            <h5 className="mt-3 carattere-font"><strong>Nome Sobrenome</strong></h5>
-            <p className="carattere-font">xx anos</p>
-            <p className="roboto-font"><strong>Atividades Preferidas:</strong></p>
-            <ul className="list-unstyled roboto-font">
-              <li>Atividade 1</li>
-              <li>Atividade 2</li>
-              <li>Atividade 3</li>
-            </ul>
-          </div>
-          <div className="col-md-8 text-center">
-            <h1>Seja um voluntário</h1> <br />
+
+          <div className="col-lg">
+
+            <h1>Seja um voluntário</h1>
+
             <div className="form-container mx-auto">
+
               <form onSubmit={handleSubmit}>
                 <label htmlFor="nome">Nome</label>
                 <input
@@ -143,14 +137,19 @@ const Form1 = () => {
 
                 <button type="submit">Enviar</button>
               </form>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
 
-      <Footer />
+      <Footer/>
+
     </div>
   );
 };
 
-export default Form1;
+export default Participe;
