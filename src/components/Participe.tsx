@@ -14,6 +14,7 @@ const Participe = () => {
     celular: '',
     data: '',
     horario: '',
+    companheiro: '',
   });
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
@@ -34,6 +35,7 @@ const Participe = () => {
         celular: formData.celular,
         dataNascimento: formData.data,
         horario: formData.horario,
+        companheiro: formData.companheiro,
       });
       console.log("Documento salvo com sucesso!");
     } catch (error) {
@@ -48,6 +50,7 @@ const Participe = () => {
       celular: '',
       data: '',
       horario: '',
+      companheiro: '',
     });
   };
 
@@ -133,6 +136,23 @@ const Participe = () => {
                   <option value="14:00">14:00</option>
                   <option value="15:00">15:00</option>
                   <option value="16:00">16:00</option>
+                </select>
+
+                <label htmlFor="companheiro">Quem é seu companheiro</label>
+                <select
+                  id="companheiro"
+                  name="companheiro"
+                  value={formData.companheiro}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>Selecione</option>
+                  <option value="Cecilia">Cecília</option>
+                  <option value="Emilia">Emília</option>
+                  <option value="Francisca">Francisca</option>
+                  <option value="Ines">Inês</option>
+                  <option value="MariaDeLourdes">Maria de Lourdes</option>
+                  <option value="MariaMatilde">Maria Matilde</option>
                 </select>
 
                 <button type="submit">Enviar</button>
