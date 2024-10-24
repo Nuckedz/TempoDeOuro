@@ -18,10 +18,10 @@ const Home = () => {
         <div className="group">
           <div className="rectangle" />
           <div className="text">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
+            “Participar deste projeto me permitiu ver um ‘lado da moeda’ que ganha pouca atenção, mas que demanda muito carinho e empatia. Estar lá me fez refletir sobre a valorização da família, o autocuidado e, principalmente, o respeito aos mais vulneráveis.”
           </div>
-          <div className="name">Fulano</div>
-          <div className="role">Participante da Tempo de Ouro</div>
+          <div className="name">Maitê Góis</div>
+          <div className="role">Voluntária do Tempo de Ouro</div>
         </div>
       </div>
 
@@ -58,7 +58,12 @@ const Home = () => {
       <div id="sobrenos" className="sobre">
         <div className="titulo">Sobre Nós</div>
         <div className="descricao">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <p>
+            Somos um grupo de estudantes de comunicação dedicados a melhorar a vida dos idosos em Curitiba. Nosso projeto surgiu para aumentar a visibilidade do voluntariado e fortalecer a conexão entre jovens e idosos. 
+          </p>
+          <p>
+            Buscamos reunir pessoas apaixonadas por ajudar, promovendo o apadrinhamento de idosos para oferecer companhia, suporte e contribuir para um envelhecimento mais digno e feliz.
+          </p>
         </div>
       </div>
 
@@ -89,13 +94,25 @@ const Home = () => {
         </div>
 
         <div className="lar">
-          <h2 className="titulo">LAR 2</h2>
+          <h2 className="titulo">Lar Arte e Cuidar</h2>
           <div className="imagens">
-            <img src="src/assets/images/lar1-1.png" alt="Imagem LAR 2" className="imagem" />
-            <img src="src/assets/images/lar1-2.png" alt="Imagem LAR 2" className="imagem" />
+            <img src="src/assets/images/lar2-1.png" alt="Imagem LAR 2" className="imagem" />
+            <img src="src/assets/images/lar2-2.png" alt="Imagem LAR 2" className="imagem" />
           </div>
           <div className="descricao">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id distinctio nesciunt atque quis adipisci. Eos non, perferendis odit commodi quam ipsum reiciendis! Saepe, tempora aspernatur delectus iste tenetur eum perspiciatis.
+            
+            <p>
+              O **Lar Arte e Cuidar**, situado em Curitiba, é uma instituição voltada para o atendimento humanizado de idosos, combinando cuidado com o estímulo à arte e à convivência. Com uma equipe qualificada de profissionais de saúde e assistência social, o lar oferece não apenas cuidados médicos, mas também atividades recreativas e terapêuticas que promovem o bem-estar físico, emocional e cognitivo dos residentes.
+            </p>
+            <p>
+              Além disso, o espaço é projetado para ser acolhedor e confortável, garantindo que os idosos se sintam em um ambiente familiar. As atividades incluem oficinas de artes, música, e programas de interação social, fortalecendo o vínculo com a comunidade e proporcionando uma experiência de vida mais rica e ativa para os moradores.
+            </p>
+            <p>
+              Os valores que norteiam o Lar Arte e Cuidar incluem o respeito à história de vida dos idosos, a promoção da autonomia dentro de suas capacidades e a criação de uma rede de apoio familiar. A equipe busca integrar a família e a comunidade local em eventos e celebrações, reforçando o sentido de pertencimento e continuidade das relações pessoais.
+            </p>
+            <p>
+              Essa combinação de cuidado técnico, ambiente afetivo e incentivo à arte faz do Lar Arte e Cuidar um lugar único, onde os idosos podem viver com dignidade, serenidade e alegria.
+            </p>
           </div>
         </div>
       </div>
