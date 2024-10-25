@@ -95,13 +95,13 @@ const Home = () => {
         <div className="lar">
           <h2 className="titulo">Lar Arte e Cuidar</h2>
           <div className="imagens">
-            <img src="src/assets/images/lar2-1.png" alt="Imagem LAR 2" className="imagem" />
-            <img src="src/assets/images/lar2-2.png" alt="Imagem LAR 2" className="imagem" />
+            <img src="src/assets/images/arte e cuidar 1.png" alt="Imagem LAR 2" className="imagem" />
+            <img src="src/assets/images/arte e cuidar 2.png" alt="Imagem LAR 2" className="imagem" />
           </div>
           <div className="descricao">
             
             <p>
-              O **Lar Arte e Cuidar**, situado em Curitiba, é uma instituição voltada para o atendimento humanizado de idosos, combinando cuidado com o estímulo à arte e à convivência. Com uma equipe qualificada de profissionais de saúde e assistência social, o lar oferece não apenas cuidados médicos, mas também atividades recreativas e terapêuticas que promovem o bem-estar físico, emocional e cognitivo dos residentes.
+              O Lar Arte e Cuidar, situado em Curitiba, é uma instituição voltada para o atendimento humanizado de idosos, combinando cuidado com o estímulo à arte e à convivência. Com uma equipe qualificada de profissionais de saúde e assistência social, o lar oferece não apenas cuidados médicos, mas também atividades recreativas e terapêuticas que promovem o bem-estar físico, emocional e cognitivo dos residentes.
             </p>
             <p>
               Além disso, o espaço é projetado para ser acolhedor e confortável, garantindo que os idosos se sintam em um ambiente familiar. As atividades incluem oficinas de artes, música, e programas de interação social, fortalecendo o vínculo com a comunidade e proporcionando uma experiência de vida mais rica e ativa para os moradores.
@@ -127,7 +127,7 @@ const Home = () => {
           <div className="contato-textos">
             <div className="alguma-duvida" id='contato'>Alguma dúvida?</div>
             <div className="entre-em-contato">Entre em Contato</div>
-            <div className="numero-telefone">41 99999-9999</div>
+            <div className="numero-telefone">41 99744-5814</div>
           </div>
         </div>
       </div>

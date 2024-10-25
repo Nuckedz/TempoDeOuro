@@ -22,6 +22,7 @@ const GetList = async () => {
                 att1={data.att1 as string} 
                 att2={data.att2 as string} 
                 att3={data.att3 as string} 
+                att4={data.att4 as string}
             />
         );
     });
