@@ -1,181 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+/*BANNER*/
+
 .banner-image {
-  width: 100%; /* Faz a imagem ocupar toda a largura */
-  height: 100%; /* Faz a imagem ocupar toda a altura */
-  object-fit: cover; /* Mantém a proporção da imagem sem distorção */
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
 }
 
 
+/*DEPOIMENTO*/
 
-/* Depoimento.css */
-
-.Depoimento {
-  width: 100%; /* Largura total da página */
+.depoimento {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  padding: 70px 0; /* Espaçamento vertical */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  padding: 0;
 }
 
-.Group2 {
-  width: 680px; /* Largura do retângulo */
-  background: white;
-  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-  display: flex;
-  flex-direction: column; /* Alinha itens verticalmente */
-  align-items: center; /* Centraliza itens horizontalmente */
-  padding: 20px; /* Espaçamento interno */
-}
-
-.Rectangle1 {
-  width: 100%; /* Largura total do retângulo */
-  height: 50px; /* Altura do retângulo */
-}
-
-.depoimento-text {
-  text-align: center;
+.text {
   color: #A66C00;
   font-size: 16px;
-  font-family: 'Cinzel', sans-serif;
-  font-weight: 400;
-  /* Espaçamento entre o texto e os outros itens */
+  font-family: 'Poppins', sans-serif; /* Definindo a fonte para Poppins */
 }
 
-.Fulano {
+.name {
   margin-top: 20px;
-  text-align: center;
   color: #693A00;
   font-size: 24px;
-  font-family: 'Carattere', serif;
-  font-weight: 400;
+  font-family: 'Merriweather', serif; /* Definindo a fonte para Merriweather */
 }
 
-.ParticipanteDaTempoDeOuro {
+.role {
   margin-top: 10px;
-  text-align: center;
   color: #693A00;
   font-size: 14px;
-  font-family: 'Cormorant Upright', serif;
-  font-weight: 400;
+  font-family: 'Poppins', sans-serif; /* Definindo a fonte para Poppins */
 }
 
-
-
+.depoimento, .passos, .sobre, .contato {
+  text-align: center;
+  padding: 50px 20px;
+}
 
 
 
 /*PASSOS*/
-.Passos {
+
+.group {
+  width: 680px;
+  background: white;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  text-align: center; /* Centraliza o conteúdo */
+}
+
+.rectangle {
+  width: 100%;
+  height: 50px;
+}
+
+.text {
+  color: #A66C00;
+  font-size: 16px;
+}
+
+.name, .role {
+  margin-top: 20px;
+  color: #693A00;
+}
+
+.name {
+  font-size: 24px;
+}
+
+.role {
+  font-size: 14px;
 }
 
 .titulo {
-  font-size: 40px; /* Ajuste o tamanho da fonte conforme necessário */
-  margin-bottom: 10px; /* Espaçamento abaixo do título */
+  font-family: 'Merriweather', serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #8B4513;
 }
 
 .subtitulo {
-  font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
-  margin-bottom: 80px; /* Espaçamento abaixo do subtítulo */
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 80px;
 }
 
-.titulo-rect {
-  font-size: 25px; /* Ajuste o tamanho da fonte conforme necessário */
-  margin-bottom: 10px; /* Espaçamento abaixo do título */
+.passos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.retangulos {
-  display: flex;
-  justify-content: space-around; /* Espaçamento igual entre os retângulos */
-  flex-wrap: wrap; /* Permite que os retângulos se movam para a próxima linha em telas menores */
-  margin: 0 10px; /* Adiciona uma margem lateral */
+.passo {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.retangulo {
-  padding: 20px; /* Espaçamento interno */
-  margin: 10px; /* Margem entre os retângulos */
-  width: calc(40% - 20px); /* Ajuste a largura, considerando margens */
-}
-
-.icone {
-  margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+.icon {
+  margin-bottom: 10px;
 }
 
 .icon-image {
-  width: 15%; /* Ajuste a largura da imagem do ícone de coração */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 15%;
+  height: auto;
 }
 
-.descricao {
-  font-size: 16px; /* Ajuste o tamanho da fonte da descrição */
-  color: #666; /* Cor da fonte da descrição */
+.passo-titulo {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.passo-descricao {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #666;
+  text-align: justify;
+  margin-right: 70px;
+  margin-left: 70px;
 }
 
 
+/*BOTAO*/
 
 .container-botao {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 30vh;
-  margin: 0;
 }
 
 .botao {
-  display: inline-block;
   padding: 15px 30px;
   background-color: #8B4513;
   color: #fff;
+  font-family: 'Merriweather', serif;
   font-size: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  border: none;
-  border-radius: 50px; /* Bordas arredondadas */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
   transition: all 0.3s ease;
-  margin: 20px 0;
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
 .botao:hover {
-  background-color: #A0522D; /* Cor ao passar o mouse */
-  transform: translateY(-3px); /* Eleva o botão ao passar o mouse */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+  background-color: #A0522D;
 }
-
-
 
 
 /*SOBRE NOS*/
-.sobre-nos {
+
+.sobre {
+  background-color: #f9f9f9;
+}
+
+.sobre .titulo {
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.sobre .descricao {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+/*LARES*/
+.lares {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.lar {
+  width: 45%; 
+  background: white;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 22px;
+  padding: 20px;
   text-align: center;
-  padding: 50px 20px; /* Adicione padding para espaço ao redor */
-  background-color: #f9f9f9; /* Cor de fundo clara */
-  margin: 20px 0; /* Margem acima e abaixo da seção */
 }
 
-.sobre-nos .titulo {
-  font-size: 24px; /* Tamanho da fonte do título */
-  font-weight: bold; /* Negrito */
-  margin-bottom: 15px; /* Espaço abaixo do título */
-  color: #8B4513; /* Cor do título */
+.imagens {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.sobre-nos .descricao {
-  font-size: 16px; /* Tamanho da fonte da descrição */
-  color: #333; /* Cor da descrição */
-  max-width: 800px; /* Largura máxima da descrição */
-  margin: 0 auto; /* Centraliza a descrição */
+.imagem {
+  width: 45%; /* Ajuste conforme necessário */
+  border-radius: 10px;
+  object-fit: cover;
 }
-
-
-
 
 
 /*CONTATO*/
+
 .contato {
   width: 100%;
-  height: 245px;
+  height: 20vh;
   background: #693A00;
   display: flex;
   justify-content: center;
@@ -185,55 +237,38 @@
 .contato-conteudo {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.ic-baseline-phone {
+.ic-phone {
   width: 81px;
   height: 81px;
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-right: 20px;
 }
 
-.vector img {
+.ic-phone img {
   width: 80px;
   height: 80px;
 }
 
 .contato-textos {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
-  justify-content: center; /* Centraliza verticalmente */
-  text-align: center; /* Centraliza o texto dentro dos elementos */
+  text-align: center;
 }
 
 .alguma-duvida {
-  font-size: 48px;
+  font-family: 'Merriweather', serif;
+  font-size: 45px;
   color: white;
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .entre-em-contato {
-  font-size: 20px;
-  color: white;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  margin-bottom: 5px;
+  font-size: 18px;
+  color: white;
 }
 
 .numero-telefone {
-  font-size: 24px;
-  color: white;
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-size: 20px;
+  color: white;
 }
-
-
-
-
