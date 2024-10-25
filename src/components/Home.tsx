@@ -50,7 +50,7 @@ const Home = () => {
       </div>
 
       <div className="container-botao">
-        <a href="/Lista" className="botao">Confira Nossos Amigos Aqui</a>
+          <a href="/Lista" className="botao">Confira Nossos Amigos Aqui</a>
       </div>
 
       {/* SEÇÃO SOBRE NÓS */}
@@ -118,21 +118,32 @@ const Home = () => {
 
 
 
-      {/* CONTATO */}
-      <div className="contato">
-        <div className="contato-conteudo">
-          <div className="ic-phone">
-            <img src="src/assets/images/phone.png" alt="Ícone de Telefone" />
-          </div>
-          <div className="contato-textos">
-            <div className="alguma-duvida" id='contato'>Alguma dúvida?</div>
-            <div className="entre-em-contato">Entre em Contato</div>
-            <div className="numero-telefone">41 99744-5814</div>
+        {/* CONTATO */}
+        <div className="contato">
+          <div className="contato-conteudo">
+            <div className="ic-phone">
+              <img src="src/assets/images/phone.png" alt="Ícone de Telefone" />
+            </div>
+            <div className="contato-textos">
+              <div className="alguma-duvida" id="contato">Alguma dúvida?</div>
+              <div className="entre-em-contato">Entre em Contato com Nosso Whatsapp</div>
+              <div className="numero-telefone">
+                <a
+                  href="https://wa.me/5541997445814?text=Olá, tenho interesse em participar, ser um voluntário!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-link"
+                >
+                  <button className="whatsapp-button">
+                    (41) 997445814
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <Footer />
+<Footer />
     </div>
   );
 };

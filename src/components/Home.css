@@ -148,7 +148,6 @@ a {
 
 
 /*BOTAO*/
-
 .container-botao {
   margin-top: 30px;
   display: flex;
@@ -163,11 +162,47 @@ a {
   font-size: 25px;
   border-radius: 50px;
   transition: all 0.3s ease;
+  text-decoration: none; /* Remove o sublinhado */
+  outline: none; /* Remove a borda azul ao focar */
+  border: none; /* Remove qualquer borda */
+  cursor: pointer; /* Mostra o ponteiro de mão ao passar o mouse */
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-align: center; /* Centraliza o texto dentro do botão */
 }
 
+/* Estilo ao passar o mouse */
 .botao:hover {
-  background-color: #A0522D;
+  background-color: #A0522D; /* Cor de fundo ao passar o mouse */
 }
+
+/* Remover sublinhado e foco */
+.botao:focus, .botao:active, .botao:visited {
+  text-decoration: none; /* Remove o sublinhado em todos os estados */
+  color: #fff; /* Mantém a cor do texto branca */
+  outline: none; /* Remove o foco padrão */
+}
+
+/* Animação de expansão ao passar o mouse */
+.botao::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2); /* Cor da animação */
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.botao:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
 
 
 /*SOBRE NOS*/
@@ -210,6 +245,8 @@ a {
   text-align: center;
 }
 
+
+
 .imagens {
   display: flex;
   justify-content: space-between;
@@ -244,6 +281,7 @@ a {
   height: 81px;
   padding: 10px;
   margin-right: 20px;
+  margin-top: -20px;
 }
 
 .ic-phone img {
@@ -271,4 +309,28 @@ a {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   color: white;
+  padding-top: 30px;
+}
+
+.whatsapp-button {
+  background-color: #25D366; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe57; 
+}
+
+
+.whatsapp-link {
+  text-decoration: none; 
 }

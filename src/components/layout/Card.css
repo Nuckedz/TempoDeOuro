@@ -13,19 +13,30 @@ h1 {
     font-size: 35px; 
 }
 
+p {
+    font-family: 'Carattere', sans-serif; 
+    font-size: 20px; 
+    margin: 0; 
+    margin-top: 10px;
+    align-self: flex-start; 
+    font-weight: bold;
+
+}
+
 .card {
     background-color: #fff;
     border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     transition: transform 0.3s;
-    width: 100%; 
+    width: 100%;
     height: auto;
     margin-bottom: 35px;
     padding: 20px;
-    display: flex; 
+    display: flex;
+    flex-direction: column; /* Coloca a imagem e o conteúdo em colunas */
     max-width: 45%;
-}
+  }
 
 
 .card img {
@@ -40,6 +51,8 @@ h1 {
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
+    justify-content: space-between; /* Garante que os elementos no topo e no fim do card fiquem espaçados */
+    height: 100%; /* Garante que a seção info ocupe todo o espaço disponível */
     
     
 }
@@ -57,7 +70,7 @@ h1 {
     font-family: 'Carattere', sans-serif; 
     font-size: 20px; 
     margin: 0; 
-    margin-top: -5px;
+    margin-top: 10px;
     align-self: flex-start; 
     font-weight: bold;
 }
@@ -66,6 +79,10 @@ h1 {
     font-family: 'Carattere', sans-serif;
     font-size: 20px;
     margin: 0; 
+    color: #333;
+    font-weight: bold;
+
+
     
     
     
@@ -76,10 +93,10 @@ h1 {
     font-family: 'Poppins', sans-serif; 
 }
 .info p.atividades {
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 20px; 
     font-weight: 400; 
-    line-height: 17px; 
+    line-height: 15px; 
     margin-bottom: 0.5px;
 }
 .info p.atividadesp {
@@ -114,5 +131,9 @@ h1 {
     width: 300%; 
     height: 0.5px; 
     background-color: #A66C00; 
-    margin: 7px -23.5px; 
+    margin: 7px -23.5px;
+    margin-top: auto; /* Isso 'empurra' a linha e o botão para o final do card */
+
 }
+
+

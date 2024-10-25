@@ -26,8 +26,9 @@ const Card: React.FC<CardProps> = ({ nome, idade, att1, att2, att3, att4 }) => {
 
       <div className="info">
         <h2>{nome}</h2>
-        <p className="idade">{idade} anos</p>
-        <p className='lar'>Doce Aconchego</p>
+        <p className="idade">{idade} anos </p>
+        <p>Lar Doce Aconchego</p>
+        
         <div className="line" />
         <p className="atividadesp">Atividades Preferidas:</p>
         <p className="atividades">{att1}</p>
@@ -36,7 +37,7 @@ const Card: React.FC<CardProps> = ({ nome, idade, att1, att2, att3, att4 }) => {
         <p className="atividades">{att4}</p>
         <div className="line" />
         <button className="saiba-mais" onClick={handleSaibaMais}>
-          SAIBA MAIS
+          SEJA UM VOLUNTÁRIO
         </button>
       </div>
     </div>

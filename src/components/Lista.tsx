@@ -8,12 +8,21 @@ import { collection, getDocs, query } from 'firebase/firestore';
 import { db } from './Firebase/FirebaseConn';
 
 
+const shuffleArray = (array: JSX.Element[]): JSX.Element[] => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Troca os elementos
+    }
+    return array;
+};
+
+
 const GetList = async () => {
     const q = query(collection(db, 'idosos'));
     const querySnapshot = await getDocs(q);
 
     const cards = querySnapshot.docs.map((doc) => {
-        const data = doc.data(); // Ensure data is typed correctly
+        const data = doc.data();
         return (
             <Card 
                 key={doc.id} 
@@ -26,11 +35,11 @@ const GetList = async () => {
             />
         );
     });
-    return cards;
+    return shuffleArray(cards);
 };
 
 const Lista = () => {
-    const [cards, setCards] = useState<JSX.Element[]>([]); // Properly type the state
+    const [cards, setCards] = useState<JSX.Element[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -43,21 +52,14 @@ const Lista = () => {
 
     return (
         <div>
-
             <Navbar />
-
             <div className="container">
-
                 <h1>CONHEÇA NOSSOS IDOSOS</h1>
-
                 <div className="cards">
                     {cards.length > 0 ? cards : <p>Loading...</p>}
                 </div>
-
             </div>
-
             <Footer />
-
         </div>
     );
 };
