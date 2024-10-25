@@ -33,7 +33,7 @@ const Participe = () => {
         idade: formData.idade,
         email: formData.email,
         celular: formData.celular,
-        dataNascimento: formData.data,
+        data: formData.data,
         horario: formData.horario,
         companheiro: formData.companheiro,
       });
@@ -114,15 +114,22 @@ const Participe = () => {
                   onChange={handleChange}
                 />
 
-                <label htmlFor="data">Data</label>
-                <input
-                  type="date"
+                <label htmlFor="data">Data da Visita</label>
+                <select
                   id="data"
                   name="data"
-                  required
-                  value={formData.data}
+                  value={formData.data} // corrigido para 'data'
                   onChange={handleChange}
-                />
+                  required
+                >
+                  <option value="" disabled>Selecione</option>
+                  <option value="Segunda-Feira">Segunda-Feira</option>
+                  <option value="Terça-Feira">Terça-Feira</option>
+                  <option value="Quarta-Feira">Quarta-Feira</option>
+                  <option value="Quinta-Feira">Quinta-Feira</option>
+                  <option value="Sexta-Feira">Sexta-Feira</option>
+
+                </select>
 
                 <label htmlFor="horario">Escolha um horário</label>
                 <select
@@ -133,6 +140,9 @@ const Participe = () => {
                   required
                 >
                   <option value="" disabled>Selecione</option>
+                  <option value="08:00">08:00</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
                   <option value="14:00">14:00</option>
                   <option value="15:00">15:00</option>
                   <option value="16:00">16:00</option>
