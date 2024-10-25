@@ -46,9 +46,7 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="container-botao">
-          <a href="caminho/da/sua/pagina.html" className="botao">Confira Nossos Amigos Aqui</a>
-        </div>
+        
       </div>
 
       <div className="container-botao">

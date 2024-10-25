@@ -20,10 +20,10 @@ const Footer = () => {
 
       <div className="footer-column navigation-column">
         <div className="navegue-por-aqui">Navegue Por Aqui</div>
-        <a href="#"><div className="navegacao-item">Participe</div></a>
-        <a href="#nossoslares"><div className="navegacao-item">Nossos Lares</div></a>
-        <a href="#sobrenos"><div className="navegacao-item">Sobre Nós</div></a>
-        <a href="#contato"><div className="navegacao-item">Contato</div></a>
+        <a href="/Participe"><div className="navegacao-item">Participe</div></a>
+        
+        <a href="/"><div className="navegacao-item">Sobre Nós</div></a>
+        
       </div>
 
       <div className="footer-column address-column">
