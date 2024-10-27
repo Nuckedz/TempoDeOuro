@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Card.css';
 import { useNavigate } from 'react-router-dom';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 interface CardProps {
   nome: string;
@@ -11,8 +12,29 @@ interface CardProps {
   att4: string
 }
 
+const getImagem = async (nome: string) => {
+  const storage = getStorage();
+  const storageRef = ref(storage, `fotos/${nome}.jpg`);
+  const url = await getDownloadURL(storageRef);
+  return url;
+}
+
 const Card: React.FC<CardProps> = ({ nome, idade, att1, att2, att3, att4 }) => {
   const navigate = useNavigate();
+  const [imageUrl, setImagemUrl] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const fetchImagem = async () => {
+      try {
+        const url = await getImagem(nome);
+        setImagemUrl(url);
+      } catch (error) {
+        console.error("Error fetching image URL:", error);
+      }
+    };
+
+    fetchImagem();
+  }, [nome]);
 
   const handleSaibaMais = () => {
     navigate('/Participe', { state: { nome, idade, att1, att2, att3, att4 } });
@@ -21,7 +43,7 @@ const Card: React.FC<CardProps> = ({ nome, idade, att1, att2, att3, att4 }) => {
   return (
     <div className="card">
       <div className="imagemCard">
-        <img src="/src/assets/Cecília.jpg" alt="Foto do Idoso" />
+        <img src={imageUrl} alt={`Foto de ${nome}`} />
       </div>
 
       <div className="info">
