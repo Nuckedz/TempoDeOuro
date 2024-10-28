@@ -77,17 +77,19 @@ const Home = () => {
           </div>
           <div className="descricao">
             <p>
-              O Lar Doce Aconchego Curitiba é uma instituição que se destaca por seu compromisso com a qualidade de vida dos idosos. Localizado em um ambiente tranquilo, o lar oferece um espaço acolhedor, ideal para aqueles que buscam um lugar seguro e cheio de carinho.
+              O Lar Doce Aconchego é uma instituição dedicada à qualidade de vida dos idosos, oferecendo um ambiente seguro e acolhedor. Com uma equipe de enfermeiros, cuidadores e terapeutas, o lar atende às necessidades individuais dos residentes, promovendo saúde física e mental por meio de atividades recreativas e terapias. 
             </p>
             <p>
-              A equipe de profissionais é composta por enfermeiros, cuidadores e terapeutas que trabalham em conjunto para atender às necessidades de cada residente, sempre priorizando a individualidade e o respeito. Com um foco na promoção da saúde física e mental, o lar oferece atividades recreativas, sociais e terapias, contribuindo para o bem-estar e a socialização dos idosos.
+              A alimentação é balanceada e adaptada para atender às necessidades nutricionais de cada idoso. O lar também valoriza a interação familiar, promovendo visitas e eventos para fortalecer os laços afetivos. É um espaço onde os idosos encontram segurança, respeito e carinho.
             </p>
+            <br></br>
             <p>
-              A alimentação é outro ponto forte do Lar Doce Aconchego, que conta com um cardápio balanceado e adaptado às necessidades nutricionais de cada morador, garantindo refeições saborosas e saudáveis.
+              Mais informações: <br></br>
+              <a href='https://www.facebook.com/lardeidososdoceaconchego/'>https://www.facebook.com/lardeidososdoceaconchego/</a>
+
             </p>
-            <p>
-              Além disso, o lar valoriza a interação familiar e a criação de laços afetivos, promovendo visitas regulares e eventos que incentivam a participação dos familiares nas atividades. Com um ambiente familiar e acolhedor, o Lar Doce Aconchego Curitiba é mais do que um asilo; é um verdadeiro lar onde os idosos podem desfrutar de segurança, respeito e amor na terceira idade.
-            </p>
+
+          
           </div>
 
         </div>
@@ -101,17 +103,10 @@ const Home = () => {
           <div className="descricao">
             
             <p>
-              O Lar Arte e Cuidar, situado em Curitiba, é uma instituição voltada para o atendimento humanizado de idosos, combinando cuidado com o estímulo à arte e à convivência. Com uma equipe qualificada de profissionais de saúde e assistência social, o lar oferece não apenas cuidados médicos, mas também atividades recreativas e terapêuticas que promovem o bem-estar físico, emocional e cognitivo dos residentes.
+              O Lar Arte e Cuidar é uma instituição focada no atendimento humanizado de idosos, unindo cuidados médicos ao estímulo à arte e à convivência. Com uma equipe de saúde e assistência social, o lar oferece atividades recreativas e terapêuticas que promovem o bem-estar físico, emocional e cognitivo. 
             </p>
             <p>
-              Além disso, o espaço é projetado para ser acolhedor e confortável, garantindo que os idosos se sintam em um ambiente familiar. As atividades incluem oficinas de artes, música, e programas de interação social, fortalecendo o vínculo com a comunidade e proporcionando uma experiência de vida mais rica e ativa para os moradores.
-            </p>
-            <p>
-              Os valores que norteiam o Lar Arte e Cuidar incluem o respeito à história de vida dos idosos, a promoção da autonomia dentro de suas capacidades e a criação de uma rede de apoio familiar. A equipe busca integrar a família e a comunidade local em eventos e celebrações, reforçando o sentido de pertencimento e continuidade das relações pessoais.
-            </p>
-            <p>
-              Essa combinação de cuidado técnico, ambiente afetivo e incentivo à arte faz do Lar Arte e Cuidar um lugar único, onde os idosos podem viver com dignidade, serenidade e alegria.
-            </p>
+              Em um espaço acolhedor, os idosos participam de oficinas de arte, música e programas sociais, fortalecendo o vínculo com a comunidade. O lar valoriza o respeito à história de vida dos residentes, incentiva sua autonomia e conta com o apoio familiar. O Projeto Tempo de Ouro é parceiro da Unidade Hauer.            </p>
           </div>
         </div>
       </div>
