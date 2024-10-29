@@ -2,10 +2,8 @@ import './Lista.css';
 import Navbar from './layout/Navbar';
 import Card from './layout/Card';
 import Footer from './layout/Footer';
-
 import { useEffect, useState } from 'react';
 import { collection, getDocs, query } from 'firebase/firestore';
-import { getStorage, ref } from "firebase/storage";
 import { db } from './Firebase/FirebaseConn';
 
 

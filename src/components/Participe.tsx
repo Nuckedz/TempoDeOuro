@@ -1,7 +1,6 @@
 import './Participe.css';
 import Navbar from './layout/Navbar';
 import Footer from './layout/Footer';
-import Card from './layout/Card';
 import { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from './Firebase/FirebaseConn'; 
