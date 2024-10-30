@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap');
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 a {
   text-decoration: none; 
   color: inherit; 
 }
-
-
 
 /*BANNER*/
 
@@ -20,7 +16,6 @@ a {
   height: 900px;
   object-fit: cover;
 }
-
 
 /*DEPOIMENTO*/
 
@@ -57,8 +52,6 @@ a {
   text-align: center;
   padding: 50px 20px;
 }
-
-
 
 /*PASSOS*/
 
@@ -148,8 +141,8 @@ a {
   margin-left: 70px;
 }
 
-
 /*BOTAO*/
+
 .container-botao {
   margin-top: 30px;
   display: flex;
@@ -204,9 +197,6 @@ a {
   transform: translate(-50%, -50%) scale(1);
 }
 
-
-
-
 /*SOBRE NOS*/
 
 .sobre {
@@ -228,9 +218,8 @@ a {
   margin: 0 auto;
 }
 
-
-
 /*LARES*/
+
 .lares {
   display: flex;
   justify-content: space-around;
@@ -247,8 +236,6 @@ a {
   text-align: center;
 }
 
-
-
 .imagens {
   display: flex;
   justify-content: space-between;
@@ -260,8 +247,6 @@ a {
   border-radius: 10px;
   object-fit: cover;
 }
-
-
 
 /*CONTATO*/
 
@@ -339,14 +324,17 @@ a {
 }
 
 /* Ajustes para dispositivos móveis */
+
 @media (max-width: 768px) {
 
   /* BANNER */
+
   .banner-image {
     height: 500px; /* Reduz a altura para telas menores */
   }
 
   /* DEPOIMENTO */
+
   .depoimento {
     padding: 20px;
     height: auto; /* Permite ajuste automático da altura */
@@ -359,6 +347,7 @@ a {
   }
 
   /* PASSOS */
+
   .group {
     width: 90%;
     padding: 15px;
@@ -375,12 +364,14 @@ a {
   }
 
   /* BOTÃO */
+
   .botao {
     font-size: 20px;
     padding: 12px 20px;
   }
 
   /* SOBRE NÓS */
+
   .sobre .titulo {
     font-size: 22px;
   }
@@ -390,6 +381,7 @@ a {
   }
 
   /* LARES */
+
   .lares {
     flex-direction: column; /* Exibe os lares em coluna */
     align-items: center;
@@ -407,6 +399,7 @@ a {
   }
 
   /* Ajusta o link do Facebook para não ultrapassar a largura */
+
   .descricao a {
     word-break: break-all; /* Quebra o link em múltiplas linhas, se necessário */
     font-size: 14px; /* Ajuste de tamanho de fonte */
@@ -424,6 +417,7 @@ a {
   }
 
   /* CONTATO */
+  
   .contato {
     height: auto;
     padding: 20px;
