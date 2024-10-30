@@ -23,35 +23,39 @@ const Participe = () => {
     });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     try {
-      await addDoc(collection(db, "colaboradores"), {
-        nome: formData.nome,
-        idade: formData.idade,
-        email: formData.email,
-        celular: formData.celular,
-        data: formData.data,
-        horario: formData.horario,
-        companheiro: formData.companheiro,
-      });
-      console.log("Documento salvo com sucesso!");
+        await addDoc(collection(db, "colaboradores"), {
+            nome: formData.nome,
+            idade: formData.idade,
+            email: formData.email,
+            celular: formData.celular,
+            data: formData.data,
+            horario: formData.horario,
+            companheiro: formData.companheiro,
+        });
+        console.log("Documento salvo com sucesso!");
+        
+        // Defina a mensagem de sucesso
+        setSuccessMessage("Formulário enviado com sucesso!");
     } catch (error) {
-      console.error("Erro ao salvar documento: ", error);
+        console.error("Erro ao salvar documento: ", error);
     }
-
     
     setFormData({
-      nome: '',
-      idade: '',
-      email: '',
-      celular: '',
-      data: '',
-      horario: '',
-      companheiro: '',
+        nome: '',
+        idade: '',
+        email: '',
+        celular: '',
+        data: '',
+        horario: '',
+        companheiro: '',
     });
-  };
+};
 
   return (
     <div>
@@ -166,7 +170,11 @@ const Participe = () => {
 
                 <button type="submit">Enviar</button>
               </form>
-
+              {successMessage && (
+                    <div className="success-message">
+                        {successMessage}
+                    </div>
+              )}
             </div>
 
           </div>

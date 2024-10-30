@@ -79,6 +79,17 @@ h1 {
   background-color: #c37f02;
 }
 
+.success-message {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #4CAF50; /* Cor do contorno verde */
+  background-color: #e8f5e9; /* Fundo verde claro */
+  color: #2e7d32; /* Cor do texto */
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* Responsividade para tablets */
 @media (max-width: 768px) {
   h1 {

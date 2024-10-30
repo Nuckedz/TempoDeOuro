@@ -14,34 +14,49 @@
     gap: 20px; /* Espaço entre os cards */
 }
 
+/* Configuração padrão dos cards */
+.card {
+    max-width: 300px; /* Define um tamanho máximo para os cards */
+    flex: 1 1 300px; /* Permite que os cards cresçam até 300px */
+}
+
 h1 {
-    font-size: 24px; /* Tamanho da fonte do título */
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 35px;
     color: #8B4513;
 }
 
+/* Responsividade para telas grandes (desktop) */
+@media (min-width: 1024px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Três colunas para telas grandes */
+        gap: 20px;
+    }
+}
+
 /* Responsividade para tablets e dispositivos menores */
 @media (max-width: 768px) {
     .cards {
-        justify-content: center; /* Centraliza os cards */
+        justify-content: center;
         gap: 15px;
     }
 
     h1 {
-        font-size: 20px; /* Reduz o tamanho do título */
+        font-size: 20px;
     }
 }
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 480px) {
     .cards {
-        flex-direction: column; /* Cards em coluna */
-        align-items: center; /* Centraliza os cards na coluna */
+        flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
 
     h1 {
-        font-size: 18px; /* Ajuste do título para telas pequenas */
+        font-size: 18px;
     }
 }
