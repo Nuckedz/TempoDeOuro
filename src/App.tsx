@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from './components/Home';  // Importa o componente Home
+import Home from './components/Home';
 import Participe from './components/Participe';
 import Lista from './components/Lista';
 import AddIdoso from './components/AddIdoso';
