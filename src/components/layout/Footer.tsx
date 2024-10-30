@@ -1,14 +1,37 @@
 // src/components/Footer.tsx
-import './Footer.css'; // Importa o arquivo CSS separado
+import { useEffect, useState } from 'react';
+import { getDownloadURL, getStorage, ref } from '@firebase/storage';
+import './Footer.css';
 
+
+const getLogoUrl = async (imgPath: string) => {
+  const storage = getStorage();
+  const storageRef = ref(storage, imgPath);
+  return await getDownloadURL(storageRef);
+}
 const Footer = () => {
+
+  const [logoUrl, setLogoUrl] = useState<string>('');
+
+  useEffect(() => {
+    const fetchLogo = async () => {
+      try {
+        const url = await getLogoUrl('assets/logo.png');
+        setLogoUrl(url);
+      } catch (error) {
+        console.error("Error fetching footer logo:", error);
+      }
+    };
+
+    fetchLogo();
+    
+  }, []);
   return (
     <div className="footer">
       <div className="footer-column logo-column">
         <img
           className="logo-tempo-de-ouro"
-          src="src/assets/images/logo.png"
-          alt="Logo Tempo de Ouro"
+          src={logoUrl} alt="Logo Tempo de Ouro"
         />
       </div>
 
