@@ -41,8 +41,8 @@ const Home = () => {
         ]);
 
         const lar2Images = await Promise.all([
-          getImageUrl('assets/lar2-1.png'),
-          getImageUrl('assets/lar2-2.png')
+          getImageUrl('assets/arte e cuidar 1.png'),
+          getImageUrl('assets/arte e cuidar 2.png')
         ]);
 
         setLarImages({ 'lar1': lar1Images, 'lar2': lar2Images });

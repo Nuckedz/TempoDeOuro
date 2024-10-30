@@ -4,8 +4,13 @@ import Footer from './layout/Footer';
 import { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from './Firebase/FirebaseConn'; 
+import { useLocation } from 'react-router-dom';
+
 
 const Participe = () => {
+
+  const location = useLocation();
+  const idosoSelecionado = location.state?.nome || ''; // nome do idoso ou string vazia
   const [formData, setFormData] = useState({
     nome: '',
     idade: '',
@@ -13,7 +18,7 @@ const Participe = () => {
     celular: '',
     data: '',
     horario: '',
-    companheiro: '',
+    companheiro: idosoSelecionado, // Define o valor inicial para companheiro
   });
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
@@ -118,21 +123,16 @@ const Participe = () => {
                 />
 
                 <label htmlFor="companheiro">Quem é seu companheiro</label>
-                    <select
+                    <input
+                      type='text'
                       id="companheiro"
                       name="companheiro"
                       value={formData.companheiro}
                       onChange={handleChange}
+                      readOnly
                       required
                     >
-                    <option value="" disabled>Selecione</option>
-                    <option value="Cecilia">Cecília</option>
-                    <option value="Emilia">Emília</option>
-                    <option value="Francisca">Francisca</option>
-                    <option value="Ines">Inês</option>
-                    <option value="MariaDeLourdes">Maria de Lourdes</option>
-                    <option value="MariaMatilde">Maria Matilde</option>
-                    </select>
+                    </input>
 
                 <label htmlFor="data">Data da Visita</label>
                 <select

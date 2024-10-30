@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({ nome, idade, att1, att2, att3, att4 }) => {
   }, [nome]);
 
   const handleSaibaMais = () => {
-    navigate('/Participe', { state: { nome, idade, att1, att2, att3, att4, } });
+    navigate('/Participe', { state: { nome } });
   };
 
   return (
