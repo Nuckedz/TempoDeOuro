@@ -11,6 +11,8 @@ a {
   color: inherit; 
 }
 
+
+
 /*BANNER*/
 
 .banner-image {
@@ -260,6 +262,7 @@ a {
 }
 
 
+
 /*CONTATO*/
 
 .contato {
@@ -333,4 +336,107 @@ a {
 
 .whatsapp-link {
   text-decoration: none; 
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+
+  /* BANNER */
+  .banner-image {
+    height: 500px; /* Reduz a altura para telas menores */
+  }
+
+  /* DEPOIMENTO */
+  .depoimento {
+    padding: 20px;
+    height: auto; /* Permite ajuste automático da altura */
+  }
+  .name {
+    font-size: 20px;
+  }
+  .role {
+    font-size: 12px;
+  }
+
+  /* PASSOS */
+  .group {
+    width: 90%;
+    padding: 15px;
+  }
+  .passos-grid {
+    grid-template-columns: 1fr; /* Coluna única em dispositivos menores */
+    gap: 15px;
+  }
+  .passo {
+    margin-bottom: 30px;
+  }
+  .passo-descricao {
+    margin: 0 15px; /* Reduz as margens laterais */
+  }
+
+  /* BOTÃO */
+  .botao {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  /* SOBRE NÓS */
+  .sobre .titulo {
+    font-size: 22px;
+  }
+  .sobre .descricao {
+    font-size: 14px;
+    margin: 0 15px;
+  }
+
+  /* LARES */
+  .lares {
+    flex-direction: column; /* Exibe os lares em coluna */
+    align-items: center;
+    padding: 20px;
+  }
+
+  .lar {
+      width: 90%; /* Reduz a largura dos lares para caber melhor em telas menores */
+      margin-bottom: 20px;
+  }
+
+  .descricao {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  /* Ajusta o link do Facebook para não ultrapassar a largura */
+  .descricao a {
+    word-break: break-all; /* Quebra o link em múltiplas linhas, se necessário */
+    font-size: 14px; /* Ajuste de tamanho de fonte */
+    color: #A66C00; /* Cor para destacar o link */
+    text-decoration: underline; /* Adiciona sublinhado para destaque */
+  }
+
+  .imagens {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .imagem {
+    width: 90%; /* Ajusta a largura para caber melhor na tela */
+  }
+
+  /* CONTATO */
+  .contato {
+    height: auto;
+    padding: 20px;
+  }
+  .alguma-duvida {
+    font-size: 32px;
+  }
+  .entre-em-contato,
+  .numero-telefone {
+    font-size: 16px;
+  }
+  .ic-phone {
+    width: 60px;
+    height: 60px;
+  }
 }

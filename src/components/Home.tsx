@@ -81,14 +81,10 @@ const Home = () => {
             </p>
             <p>
               A alimentação é balanceada e adaptada para atender às necessidades nutricionais de cada idoso. O lar também valoriza a interação familiar, promovendo visitas e eventos para fortalecer os laços afetivos. É um espaço onde os idosos encontram segurança, respeito e carinho.
-            </p>
-            <br></br>
-            <p>
-              Mais informações: <br></br>
+              <br></br>
               <a href='https://www.facebook.com/lardeidososdoceaconchego/'>https://www.facebook.com/lardeidososdoceaconchego/</a>
-
             </p>
-
+            
           
           </div>
 

@@ -35,3 +35,36 @@
 .mdi-user {
   margin-right: 10px;
 }
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  
+
+  .nav-item {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  /* Estilos para o ícone do menu "hambúrguer" */
+  .menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Estilo para exibir os itens de navegação quando o menu está ativo */
+  .nav-items.active {
+    display: flex;
+  }
+}

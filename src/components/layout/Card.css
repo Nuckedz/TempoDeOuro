@@ -24,27 +24,17 @@ p {
 }
 
 .card {
-    background-color: #fff;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: transform 0.3s;
     width: 100%;
+    max-width: 100%; 
     height: auto;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     padding: 20px;
-    display: flex;
-    flex-direction: column; /* Coloca a imagem e o conteúdo em colunas */
-    max-width: 45%;
-  }
-
-
-.card img {
-    width: 70%; 
-    object-fit: cover; 
-    border-radius: 15px;
 }
 
+.card img {
+    width: 100%; 
+    border-radius: 15px;
+}
 .info {
     padding: 5%;
     display: flex;
@@ -133,6 +123,64 @@ p {
     margin: 7px -23.5px;
     margin-top: auto; /* Isso 'empurra' a linha e o botão para o final do card */
 
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+
+    .info {
+        padding: 10%;
+    }
+
+    .info h2 {
+        font-size: 28px; /* Ajuste para caber melhor na tela */
+        line-height: 36px;
+    }
+
+    .info p.idade, .info p.lar {
+        font-size: 18px;
+    }
+
+    .info p.atividades, .info p.atividadesp {
+        font-size: 16px;
+    }
+
+    .saiba-mais {
+        font-size: 18px; 
+        padding: 5px 10px;
+    }
+
+    .line {
+        width: 100%; /* A linha ocupará a largura do card em telas menores */
+        margin: 5px 0;
+    }
+}
+
+/* Ajustes adicionais para telas muito pequenas */
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+    }
+
+    .info h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .info p.idade, .info p.lar, .info p.atividades, .info p.atividadesp {
+        font-size: 14px;
+    }
+
+    .saiba-mais {
+        font-size: 16px;
+    }
+
+    .line {
+        margin: 5px 0;
+    }
 }
 
 

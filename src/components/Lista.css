@@ -1,3 +1,4 @@
+/* Configuração padrão */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -5,15 +6,42 @@
     margin: auto;
 }
 
+/* Estilo da lista de cards */
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 20px; /* Espaço entre os cards */
 }
 
 h1 {
     font-size: 24px; /* Tamanho da fonte do título */
-    font-weight: bold; /* Negrito */
-    margin-bottom: 35px; /* Espaço abaixo do título */
-    color: #8B4513; /* Cor do título */
+    font-weight: bold;
+    margin-bottom: 35px;
+    color: #8B4513;
+}
+
+/* Responsividade para tablets e dispositivos menores */
+@media (max-width: 768px) {
+    .cards {
+        justify-content: center; /* Centraliza os cards */
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 20px; /* Reduz o tamanho do título */
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+    .cards {
+        flex-direction: column; /* Cards em coluna */
+        align-items: center; /* Centraliza os cards na coluna */
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 18px; /* Ajuste do título para telas pequenas */
+    }
 }

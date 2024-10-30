@@ -64,3 +64,54 @@
     font-weight: 300;
     margin: 5px 0;
 }
+
+/* Estilos responsivos para o footer */
+@media (max-width: 768px) {
+
+    .footer {
+        flex-direction: column; /* Exibe as colunas em uma única coluna */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footer-column {
+        min-width: 100%; /* Ocupa toda a largura da tela */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .logo-column {
+        justify-content: center;
+    }
+
+    .logo-tempo-de-ouro {
+        width: 140px; /* Ajusta o tamanho do logo para telas menores */
+    }
+
+    .descricao {
+        font-size: 13px; /* Ajuste o tamanho da fonte */
+        padding: 0 15px; /* Adiciona um pouco de espaço nas laterais */
+        text-align: center;
+    }
+
+    .navegue-por-aqui {
+        font-size: 14px;
+        margin-left: 0; /* Centraliza o título em telas menores */
+        text-align: center;
+    }
+
+    .navegacao-item {
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+        margin-left: 0; /* Centraliza os itens de navegação */
+    }
+
+    .lar-titulo {
+        font-size: 14px;
+    }
+
+    .endereco {
+        font-size: 12px;
+        text-align: center; /* Centraliza o texto do endereço */
+    }
+}
+
