@@ -6,6 +6,7 @@ import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 interface CardProps {
   nome: string;
   idade: number;
+  lar: string;
   att1: string;
   att2: string;
   att3: string;
@@ -19,7 +20,7 @@ const getImagem = async (nome: string) => {
   return url;
 }
 
-const Card: React.FC<CardProps> = ({ nome, idade, att1, att2, att3, att4 }) => {
+const Card: React.FC<CardProps> = ({ nome, idade, lar, att1, att2, att3, att4 }) => {
   const navigate = useNavigate();
   const [imageUrl, setImagemUrl] = useState<string | undefined>(undefined);
 
@@ -49,8 +50,7 @@ const Card: React.FC<CardProps> = ({ nome, idade, att1, att2, att3, att4 }) => {
       <div className="info">
         <h2>{nome}</h2>
         <p className="idade">{idade} anos </p>
-        <p>Lar Doce Aconchego</p>
-        
+        <p className="lar-idoso">{lar}</p>
         <div className="line" />
         <p className="atividadesp">Atividades Preferidas:</p>
         <p className="atividades">{att1}</p>

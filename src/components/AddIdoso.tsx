@@ -10,6 +10,7 @@ const AddIdoso = () => {
   const [formData, setFormData] = useState({
     nome: '',
     idade: 0,
+    lar: '', // Novo campo "Lar"
     att1: '',
     att2: '',
     att3: '',
@@ -29,6 +30,7 @@ const AddIdoso = () => {
       await addDoc(collection(db, "idosos"), {
         nome: formData.nome,
         idade: formData.idade,
+        lar: formData.lar, 
         att1: formData.att1,
         att2: formData.att2,
         att3: formData.att3,
@@ -41,6 +43,7 @@ const AddIdoso = () => {
     setFormData({
       nome: '',
       idade: 0,
+      lar: '', 
       att1: '',
       att2: '',
       att3: '',
@@ -49,19 +52,13 @@ const AddIdoso = () => {
 
   return (
     <div>
-
       <Navbar/>
 
       <div className="container-fluid d-flex align-items-center justify-content-center vh-100">
-
         <div className="row align-items-center">
-
           <div className="col-lg">
-
             <h1>Adicione um Idoso</h1>
-
             <div className="form-container mx-auto">
-
               <form onSubmit={handleSubmit}>
                 <label htmlFor="nome">Nome</label>
                 <input
@@ -85,7 +82,18 @@ const AddIdoso = () => {
                   onChange={handleChange}
                 />
 
-                <label htmlFor="email">Atividade 1</label>
+                <label htmlFor="lar">Lar</label>
+                <input
+                  type="text"
+                  id="lar"
+                  name="lar"
+                  placeholder="Digite o nome do lar"
+                  required
+                  value={formData.lar}
+                  onChange={handleChange}
+                />
+
+                <label htmlFor="att1">Atividade 1</label>
                 <input
                   type="text"
                   id="att1"
@@ -96,7 +104,7 @@ const AddIdoso = () => {
                   onChange={handleChange}
                 />
 
-                <label htmlFor="celular">Atividade 2</label>
+                <label htmlFor="att2">Atividade 2</label>
                 <input
                   type="text"
                   id="att2"
@@ -107,7 +115,7 @@ const AddIdoso = () => {
                   onChange={handleChange}
                 />
 
-                <label htmlFor="data">Atividade 3</label>
+                <label htmlFor="att3">Atividade 3</label>
                 <input
                   type="text"
                   id="att3"
@@ -120,17 +128,12 @@ const AddIdoso = () => {
 
                 <button type="submit">Enviar</button>
               </form>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
 
       <Footer/>
-
     </div>
   );
 };

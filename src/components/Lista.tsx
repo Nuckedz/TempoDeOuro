@@ -26,6 +26,7 @@ const GetList = async () => {
             <Card 
                 key={doc.id} 
                 nome={data.nome as string} 
+                lar={data.lar as string}
                 idade={data.idade as number} 
                 att1={data.att1 as string} 
                 att2={data.att2 as string} 

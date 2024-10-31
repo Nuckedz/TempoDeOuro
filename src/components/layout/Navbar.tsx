@@ -1,6 +1,7 @@
 import { getDownloadURL, getStorage, ref } from '@firebase/storage';
-import './Navbar.css'; // Crie este arquivo CSS para estilizar a Navbar
+import './Navbar.css';
 import { useEffect, useState } from 'react';
+
 
 const getLogoUrl = async (imgPath: string) => {
   const storage = getStorage();
@@ -14,9 +15,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-
         setLogoUrl(await getLogoUrl('assets/logo.png'));
-
       } catch (error) {
         console.error("Error fetching images:", error);
       }
@@ -27,8 +26,9 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-
-      <img className="logo" src={logoUrl} alt="Logo Tempo de Ouro"/>
+      <a href="/"> 
+        <img className="logo" src={logoUrl} alt="Logo Tempo de Ouro"/>
+      </a>
 
       <div className="nav-items">
         <a href="/Participe" className="nav-item">PARTICIPE</a>
@@ -38,7 +38,6 @@ const Navbar = () => {
       <div className="header">
         <div className="mdi-user"></div>
       </div>
-
     </div>
   );
 };

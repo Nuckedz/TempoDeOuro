@@ -13,7 +13,7 @@ a {
 
 .banner-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -236,6 +236,14 @@ a {
   text-align: center;
 }
 
+.site-lar {
+  width: 45%;
+  color: #693A00;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
 .imagens {
   display: flex;
   justify-content: space-between;
@@ -330,7 +338,7 @@ a {
   /* BANNER */
 
   .banner-image {
-    height: 500px; /* Reduz a altura para telas menores */
+    height: 100%; /* Reduz a altura para telas menores */
   }
 
   /* DEPOIMENTO */

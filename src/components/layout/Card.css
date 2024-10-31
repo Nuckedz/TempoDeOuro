@@ -30,9 +30,32 @@ p {
     padding: 20px;
 }
 
+.card .lar-idoso {
+  box-shadow: none; 
+}
+
+.imagemCard {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+}
+
 .card img {
-    width: 100%; 
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
     border-radius: 15px;
+}
+
+.lar-idoso {
+    font-size: 20px;
+    font-weight: bold;
+    color: #693A00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    white-space: nowrap; /* Impede a quebra de linha */
+    max-width: 100%; /* Garante que não ultrapasse a largura do card */
 }
 
 .info {

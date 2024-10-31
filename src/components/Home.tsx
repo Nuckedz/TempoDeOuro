@@ -160,7 +160,9 @@ const Home = () => {
             <p>
               A alimentação é balanceada e adaptada para atender às necessidades nutricionais de cada idoso. O lar também valoriza a interação familiar, promovendo visitas e eventos para fortalecer os laços afetivos. É um espaço onde os idosos encontram segurança, respeito e carinho.
               <br></br>
-              <a href='https://www.facebook.com/lardeidososdoceaconchego/'>https://www.facebook.com/lardeidososdoceaconchego/</a>
+              <br></br>
+
+              <a className='site-lar' href='https://www.facebook.com/lardeidososdoceaconchego/'>Clique para mais Informações:</a>
             </p>
           </div>
 
@@ -181,7 +183,9 @@ const Home = () => {
               O Lar Arte e Cuidar é uma instituição focada no atendimento humanizado de idosos, unindo cuidados médicos ao estímulo à arte e à convivência. Com uma equipe de saúde e assistência social, o lar oferece atividades recreativas e terapêuticas que promovem o bem-estar físico, emocional e cognitivo. 
             </p>
             <p>
-              Em um espaço acolhedor, os idosos participam de oficinas de arte, música e programas sociais, fortalecendo o vínculo com a comunidade. O lar valoriza o respeito à história de vida dos residentes, incentiva sua autonomia e conta com o apoio familiar. O Projeto Tempo de Ouro é parceiro da Unidade Hauer.            </p>
+              Em um espaço acolhedor, os idosos participam de oficinas de arte, música e programas sociais, fortalecendo o vínculo com a comunidade. O lar valoriza o respeito à história de vida dos residentes, incentiva sua autonomia e conta com o apoio familiar. O Projeto Tempo de Ouro é parceiro da Unidade Hauer.</p>
+              <br></br>
+              <a className='site-lar'href='https://arteecuidar.com.br/unidades/residencial-hauer/'>Clique para mais Informações: </a>
           </div>
 
         </div>
