@@ -5,13 +5,15 @@ import Home from './components/Home';
 import Participe from './components/Participe';
 import Lista from './components/Lista';
 import AddIdoso from './components/AddIdoso';
+import { Analytics } from "@vercel/analytics/react";
+
 
 
 function App() {
   return (
     <BrowserRouter>
       <div>
-
+        <Analytics />
         <Routes>
           <Route path="/" element={ <Home/> }/>
           <Route path="Lista" element={ <Lista/> }/>
